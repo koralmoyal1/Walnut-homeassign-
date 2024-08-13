@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic metadata for the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Interaction</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section containing the Walnut logo -->
+    <header>
+        <img src="logo-small.png" alt="Walnut Logo" class="walnut-logo">
+    </header>
+
+    <!-- Main container for the grid interaction elements -->
+    <div class="container">
+        <!-- Dropdown to select grid size -->
+        <select id="gridSize" aria-label="Select grid size">
+            <option value="" disabled selected>Pick Mode</option>
+            <option value="5">5x5</option>
+            <option value="10">10x10</option>
+            <option value="15">15x15</option>
+        </select>
+
+        <!-- Button to start or stop the grid interaction -->
+        <button id="toggleBtn" aria-pressed="false">Start</button>
+
+        <!-- The grid where the interaction takes place -->
+        <div id="grid" class="grid" role="grid" aria-labelledby="gridSize"></div>
+    </div>
+
+    <!-- On-screen message container, hidden by default -->
+    <div id="message-container" class="hidden">
+        <p id="message"></p>
+        <button id="close-message" onclick="closeMessage()">Close</button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
